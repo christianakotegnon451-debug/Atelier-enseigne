@@ -1,0 +1,596 @@
+/* ===== PAGES SPÉCIFIQUES ===== */
+
+/* Page À Propos */
+.histoire-section {
+    padding: 80px 0;
+}
+
+.histoire-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.histoire-timeline {
+    margin-top: 40px;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    bottom: -30px;
+    width: 2px;
+    background: var(--primary-color);
+    opacity: 0.3;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-year {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    margin-right: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-content {
+    flex: 1;
+    padding-top: 10px;
+}
+
+/* Équipe */
+.equipe-section {
+    background: var(--light-bg);
+    padding: 80px 0;
+}
+
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.membre-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.membre-card:hover {
+    transform: translateY(-10px);
+}
+
+.membre-photo {
+    height: 250px;
+    overflow: hidden;
+}
+
+.membre-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.membre-card:hover .membre-photo img {
+    transform: scale(1.05);
+}
+
+.membre-info {
+    padding: 25px;
+}
+
+.membre-role {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.membre-contact {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.membre-contact span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.membre-contact i {
+    color: var(--primary-color);
+    margin-right: 8px;
+    width: 20px;
+}
+
+/* Valeurs */
+.valeurs-section {
+    padding: 80px 0;
+}
+
+.valeurs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.valeur-card {
+    text-align: center;
+    padding: 40px 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.valeur-card:hover {
+    transform: translateY(-5px);
+}
+
+.valeur-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Certifications */
+.certifications-section {
+    background: var(--light-bg);
+    padding: 80px 0;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certification-item {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.certification-item img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Page Contact */
+.contact-info-section {
+    padding: 60px 0;
+    background: var(--light-bg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.contact-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.contact-hours {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 10px 0;
+}
+
+.contact-link-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contact-link-btn:hover {
+    text-decoration: underline;
+}
+
+.contact-form-section {
+    padding: 80px 0;
+}
+
+.form-map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-form-container {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.contact-map-container {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+}
+
+.map-wrapper {
+    margin-top: 20px;
+}
+
+.map-placeholder {
+    height: 300px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-light);
+}
+
+.map-overlay {
+    text-align: center;
+    padding: 20px;
+}
+
+.access-info {
+    margin-top: 20px;
+}
+
+.access-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.access-info li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.access-info i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    width: 20px;
+}
+
+.rdv-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.rdv-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Page Marquage Véhicules */
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-image {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.intro-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.marquage-types {
+    background: var(--light-bg);
+    padding: 80px 0;
+}
+
+.vehicules-section {
+    padding: 80px 0;
+}
+
+.vehicules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.vehicule-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.vehicule-card:hover {
+    transform: translateY(-5px);
+}
+
+.vehicule-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.garanties-section {
+    background: var(--light-bg);
+    padding: 80px 0;
+}
+
+.garanties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.garantie-card {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.garantie-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Page Réalisations Enseignes */
+.types-enseignes {
+    padding: 60px 0;
+    background: var(--light-bg);
+}
+
+.types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.type-item {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.type-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.projet-technique {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: rgba(234, 0, 113, 0.1);
+    color: var(--primary-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Configurateur Stickers */
+.type-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.type-card input {
+    display: none;
+}
+
+.type-card label {
+    display: block;
+    padding: 30px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.type-card input:checked + label {
+    border-color: var(--primary-color);
+    background: rgba(234, 0, 113, 0.05);
+}
+
+.type-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.type-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+.format-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.format-preset input {
+    display: none;
+}
+
+.format-preset label {
+    display: block;
+    padding: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.format-preset input:checked + label {
+    border-color: var(--primary-color);
+    background: rgba(234, 0, 113, 0.05);
+}
+
+.format-size {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.format-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.format-desc {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.quantity-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.sticker-examples {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.examples-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.example-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.example-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.example-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.example-card:hover .example-image img {
+    transform: scale(1.05);
+}
+
+.example-info {
+    padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .histoire-content,
+    .form-map-grid,
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .tab-content-inner {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .equipe-grid,
+    .valeurs-grid,
+    .certifications-grid,
+    .contact-grid,
+    .vehicules-grid,
+    .garanties-grid,
+    .types-grid,
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .type-options,
+    .format-options {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form-container,
+    .contact-map-container {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurateur d'Enseignes | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Personnalisez votre enseigne en ligne. Choix des dimensions, matériaux, couleurs et options d'éclairage.">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/configurateur.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nos Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../services/signaletique-enseignes.html">Signalétique & Enseignes</a></li>
+                            <li><a href="../services/marquage-vehicules.html">Marquage Véhicules</a></li>
+                            <li><a href="../services/textile-personnalise.html">Textile Personnalisé</a></li>
+                            <li><a href="../services/fermetures-securite.html">Fermetures & Sécurité</a></li>
+                            <li><a href="../services/creation-sites-web.html">Création de Sites Web</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../realisations/index.html">Nos Réalisations</a></li>
+                    <li><a href="index.html" class="active">Boutique</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../devis.html" class="cta-button">Devis gratuit</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="cart-icon">
+                    <a href="#panier"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                </div>
+                <a href="../contact.html" class="contact-link"><i class="fas fa-phone-alt"></i> 02 40 XX XX XX</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Configurateur Header -->
+    <section class="config-header">
+        <div class="container">
+            <h1>Configurateur d'Enseignes</h1>
+            <p>Personnalisez votre enseigne étape par étape</p>
+        </div>
+    </section>
+
+    <!-- Configurateur -->
+    <section class="configurateur-section">
+        <div class="container">
+            <div class="configurateur-wrapper">
+                <!-- Étape 1: Dimensions -->
+                <div class="config-step active" id="step-dimensions">
+                    <div class="step-header">
+                        <h2><span class="step-number">1</span> Dimensions</h2>
+                        <p>Choisissez la taille de votre enseigne</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="dimensions-options">
+                            <div class="dimension-preset">
+                                <input type="radio" id="dim-60x40" name="dimensions" value="60x40">
+                                <label for="dim-60x40">
+                                    <div class="dimension-size">60 x 40 cm</div>
+                                    <div class="dimension-price">À partir de 199€ HT</div>
+                                </label>
+                            </div>
+                            
+                            <div class="dimension-preset">
+                                <input type="radio" id="dim-80x60" name="dimensions" value="80x60" checked>
+                                <label for="dim-80x60">
+                                    <div class="dimension-size">80 x 60 cm</div>
+                                    <div class="dimension-price">À partir de 279€ HT</div>
+                                </label>
+                            </div>
+                            
+                            <div class="dimension-preset">
+                                <input type="radio" id="dim-100x70" name="dimensions" value="100x70">
+                                <label for="dim-100x70">
+                                    <div class="dimension-size">100 x 70 cm</div>
+                                    <div class="dimension-price">À partir de 349€ HT</div>
+                                </label>
+                            </div>
+                            
+                            <div class="dimension-preset">
+                                <input type="radio" id="dim-surmesure" name="dimensions" value="surmesure">
+                                <label for="dim-surmesure">
+                                    <div class="dimension-size">Sur mesure</div>
+                                    <div class="dimension-price">Devis personnalisé</div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="dimensions-custom" id="custom-dimensions" style="display: none;">
+                            <div class="custom-inputs">
+                                <div class="input-group">
+                                    <label for="largeur">Largeur (cm)</label>
+                                    <input type="number" id="largeur" min="30" max="300" value="80">
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="hauteur">Hauteur (cm)</label>
+                                    <input type="number" id="hauteur" min="30" max="200" value="60">
+                                </div>
+                            </div>
+                            <div class="surface-info">
+                                Surface : <span id="surface">0.48</span> m²
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary next-step" data-next="step-materiau">Suivant : Matériau</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 2: Matériau -->
+                <div class="config-step" id="step-materiau">
+                    <div class="step-header">
+                        <h2><span class="step-number">2</span> Matériau</h2>
+                        <p>Choisissez le support de votre enseigne</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="materiau-options">
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-pvc" name="materiau" value="pvc" checked>
+                                <label for="materiau-pvc">
+                                    <div class="materiau-image">
+                                        <img src="../images/materiaux/pvc.jpg" alt="PVC">
+                                    </div>
+                                    <div class="materiau-info">
+                                        <h3>PVC Expansé</h3>
+                                        <p>Idéal pour les enseignes économiques. Léger et facile à installer.</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-weight"></i> Léger</span>
+                                            <span><i class="fas fa-euro-sign"></i> Économique</span>
+                                        </div>
+                                        <div class="materiau-price">+ 0€</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-plexiglas" name="materiau" value="plexiglas">
+                                <label for="materiau-plexiglas">
+                                    <div class="materiau-image">
+                                        <img src="../images/materiaux/plexiglas.jpg" alt="Plexiglas">
+                                    </div>
+                                    <div class="materiau-info">
+                                        <h3>Plexiglas</h3>
+                                        <p>Élégant et moderne. Excellente résistance aux UV.</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-gem"></i> Brillant</span>
+                                            <span><i class="fas fa-sun"></i> Résistant UV</span>
+                                        </div>
+                                        <div class="materiau-price">+ 89€</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-aluminium" name="materiau" value="aluminium">
+                                <label for="materiau-aluminium">
+                                    <div class="materiau-image">
+                                        <img src="../images/materiaux/aluminium.jpg" alt="Aluminium">
+                                    </div>
+                                    <div class="materiau-info">
+                                        <h3>Aluminium</h3>
+                                        <p>Professionnel et durable. Parfait pour l'extérieur.</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-shield-alt"></i> Résistant</span>
+                                            <span><i class="fas fa-cloud-rain"></i> Extérieur</span>
+                                        </div>
+                                        <div class="materiau-price">+ 129€</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-dimensions">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-eclairage">Suivant : Éclairage</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 3: Éclairage -->
+                <div class="config-step" id="step-eclairage">
+                    <div class="step-header">
+                        <h2><span class="step-number">3</span> Éclairage</h2>
+                        <p>Choisissez l'éclairage de votre enseigne</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="eclairage-options">
+                            <div class="eclairage-card">
+                                <input type="radio" id="eclairage-aucun" name="eclairage" value="aucun" checked>
+                                <label for="eclairage-aucun">
+                                    <div class="eclairage-icon">
+                                        <i class="fas fa-ban"></i>
+                                    </div>
+                                    <h3>Sans éclairage</h3>
+                                    <p>Enseigne non lumineuse, visible uniquement de jour</p>
+                                    <div class="eclairage-price">+ 0€</div>
+                                </label>
+                            </div>
+                            
+                            <div class="eclairage-card">
+                                <input type="radio" id="eclairage-led" name="eclairage" value="led">
+                                <label for="eclairage-led">
+                                    <div class="eclairage-icon">
+                                        <i class="fas fa-lightbulb"></i>
+                                    </div>
+                                    <h3>LED Blanc</h3>
+                                    <p>Éclairage LED économique, consommation réduite</p>
+                                    <div class="eclairage-price">+ 199€</div>
+                                </label>
+                            </div>
+                            
+                            <div class="eclairage-card">
+                                <input type="radio" id="eclairage-led-color" name="eclairage" value="led-color">
+                                <label for="eclairage-led-color">
+                                    <div class="eclairage-icon">
+                                        <i class="fas fa-palette"></i>
+                                    </div>
+                                    <h3>LED RGB</h3>
+                                    <p>Éclairage LED avec changement de couleur à distance</p>
+                                    <div class="eclairage-price">+ 299€</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-materiau">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-personnalisation">Suivant : Personnalisation</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 4: Personnalisation -->
+                <div class="config-step" id="step-personnalisation">
+                    <div class="step-header">
+                        <h2><span class="step-number">4</span> Personnalisation</h2>
+                        <p>Ajoutez votre texte et votre logo</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="personnalisation-wrapper">
+                            <div class="personnalisation-editor">
+                                <div class="editor-controls">
+                                    <div class="control-group">
+                                        <label for="texte-enseigne">Texte de l'enseigne</label>
+                                        <input type="text" id="texte-enseigne" placeholder="Votre texte ici" value="VOTRE NOM">
+                                    </div>
+                                    
+                                    <div class="control-group">
+                                        <label for="police">Police de caractère</label>
+                                        <select id="police">
+                                            <option value="arial">Arial</option>
+                                            <option value="montserrat">Montserrat</option>
+                                            <option value="roboto">Roboto</option>
+                                            <option value="opensans">Open Sans</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="control-group">
+                                        <label for="couleur-texte">Couleur du texte</label>
+                                        <input type="color" id="couleur-texte" value="#000000">
+                                    </div>
+                                    
+                                    <div class="control-group">
+                                        <label for="couleur-fond">Couleur de fond</label>
+                                        <input type="color" id="couleur-fond" value="#ffffff">
+                                    </div>
+                                </div>
+                                
+                                <div class="upload-section">
+                                    <h4>Télécharger votre logo</h4>
+                                    <div class="upload-area" id="uploadArea">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Glissez-déposez votre fichier ici</p>
+                                        <p class="upload-info">Formats : JPG, PNG, PDF, AI - Max 10MB</p>
+                                        <input type="file" id="fileUpload" accept=".jpg,.jpeg,.png,.pdf,.ai">
+                                    </div>
+                                    <div id="uploadedFiles"></div>
+                                </div>
+                                
+                                <div class="instructions">
+                                    <h4>Instructions spéciales</h4>
+                                    <textarea id="instructions" placeholder="Ajoutez des instructions spécifiques pour votre enseigne..."></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="personnalisation-preview">
+                                <div class="preview-header">
+                                    <h4>Aperçu en direct</h4>
+                                    <button class="btn-small" id="refreshPreview"><i class="fas fa-redo"></i> Actualiser</button>
+                                </div>
+                                
+                                <div class="preview-container">
+                                    <div class="preview-enseigne" id="previewEnseigne">
+                                        <div class="preview-fond">
+                                            <div class="preview-texte">VOTRE NOM</div>
+                                            <div class="preview-logo"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="preview-info">
+                                    <p>Dimensions : <span id="previewDimensions">80x60 cm</span></p>
+                                    <p>Matériau : <span id="previewMateriau">PVC</span></p>
+                                    <p>Éclairage : <span id="previewEclairage">Aucun</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-eclairage">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-resume">Suivant : Récapitulatif</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 5: Récapitulatif -->
+                <div class="config-step" id="step-resume">
+                    <div class="step-header">
+                        <h2><span class="step-number">5</span> Récapitulatif</h2>
+                        <p>Vérifiez votre commande avant validation</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="resume-wrapper">
+                            <div class="resume-details">
+                                <h3>Détails de votre enseigne</h3>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Dimensions :</span>
+                                    <span class="detail-value" id="resumeDimensions">80 x 60 cm</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Matériau :</span>
+                                    <span class="detail-value" id="resumeMateriau">PVC Expansé</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Éclairage :</span>
+                                    <span class="detail-value" id="resumeEclairage">Aucun</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Texte :</span>
+                                    <span class="detail-value" id="resumeTexte">VOTRE NOM</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Police :</span>
+                                    <span class="detail-value" id="resumePolice">Arial</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Instructions :</span>
+                                    <span class="detail-value" id="resumeInstructions">Aucune</span>
+                                </div>
+                                
+                                <div class="detail-item total">
+                                    <span class="detail-label">Total :</span>
+                                    <span class="detail-value price-total" id="resumeTotal">279€ HT</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resume-preview">
+                                <div class="final-preview">
+                                    <h4>Votre enseigne</h4>
+                                    <div id="finalPreview"></div>
+                                </div>
+                                
+                                <div class="delivery-info">
+                                    <h4>Livraison et délais</h4>
+                                    <ul>
+                                        <li><i class="fas fa-clock"></i> Fabrication : 10-15 jours ouvrés</li>
+                                        <li><i class="fas fa-truck"></i> Livraison offerte en France métropolitaine</li>
+                                        <li><i class="fas fa-tools"></i> Installation possible (devis sur demande)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-actions">
+                            <div class="quantity-selector">
+                                <label for="quantite">Quantité :</label>
+                                <div class="quantity-control">
+                                    <button class="qty-btn" data-action="decrease">-</button>
+                                    <input type="number" id="quantite" value="1" min="1" max="10">
+                                    <button class="qty-btn" data-action="increase">+</button>
+                                </div>
+                            </div>
+                            
+                            <div class="resume-buttons">
+                                <button class="btn-secondary" id="modifyConfig">Modifier la configuration</button>
+                                <button class="btn-primary" id="addToCart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Panier flottant -->
+                <div class="floating-cart">
+                    <div class="cart-summary">
+                        <h4><i class="fas fa-shopping-cart"></i> Votre panier</h4>
+                        <div class="cart-items">
+                            <div class="cart-empty" id="cartEmpty">
+                                <p>Votre panier est vide</p>
+                            </div>
+                        </div>
+                        <div class="cart-total">
+                            <span>Total :</span>
+                            <span class="cart-total-price">0€ HT</span>
+                        </div>
+                        <button class="btn-primary" id="viewCart">Voir le panier</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="config-faq">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment sont livrées les enseignes ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les enseignes sont emballées soigneusement dans des caisses en bois sur mesure pour assurer une protection maximale pendant le transport. La livraison est offerte en France métropolitaine.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Puis-je modifier ma commande après validation ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, vous avez 24 heures après votre commande pour apporter des modifications. Contactez-nous par téléphone ou email avec votre numéro de commande.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Proposez-vous l'installation ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nos équipes techniques interviennent sur Nantes et sa région pour l'installation de vos enseignes. L'installation fait l'objet d'un devis séparé.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>Personnalisez votre enseigne en ligne.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Besoin d'aide ?</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 02 40 XX XX XX</li>
+                        <li><i class="fas fa-envelope"></i> configurateur@atelier-enseigne.fr</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne - Configurateur en ligne</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panier modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Votre panier</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="cartModalBody">
+                <!-- Contenu dynamique du panier -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="continueShopping">Continuer mes achats</button>
+                <button class="btn-primary" id="proceedCheckout">Passer commande</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/configurateur.js"></script>
+    <script src="../js/panier.js"></script>
+</body>
+</html>

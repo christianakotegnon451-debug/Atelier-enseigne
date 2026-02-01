@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurateur Textile | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Personnalisez vos T-shirts, polos et sweats en ligne. Choix du modèle, couleur, taille et personnalisation.">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/configurateur.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="../../css/configurateur.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <script type="text/javascript" src="../../js/configurateur-textile.js"></script>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nos Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../services/signaletique-enseignes.html">Signalétique & Enseignes</a></li>
+                            <li><a href="../services/marquage-vehicules.html">Marquage Véhicules</a></li>
+                            <li><a href="../services/textile-personnalise.html">Textile Personnalisé</a></li>
+                            <li><a href="../services/fermetures-securite.html">Fermetures & Sécurité</a></li>
+                            <li><a href="../services/creation-sites-web.html">Création de Sites Web</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../realisations/index.html">Nos Réalisations</a></li>
+                    <li><a href="index.html" class="active">Boutique</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../devis.html" class="cta-button">Devis gratuit</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="cart-icon">
+                    <a href="#panier"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                </div>
+                <a href="../contact.html" class="contact-link"><i class="fas fa-phone-alt"></i> 02 40 XX XX XX</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Configurateur Header -->
+    <section class="config-header">
+        <div class="container">
+            <h1>Configurateur Textile</h1>
+            <p>Personnalisez vos vêtements professionnels en ligne</p>
+        </div>
+    </section>
+
+    <!-- Configurateur -->
+    <section class="configurateur-section">
+        <div class="container">
+            <div class="configurateur-wrapper">
+                <!-- Étape 1: Produit -->
+                <div class="config-step active" id="step-produit">
+                    <div class="step-header">
+                        <h2><span class="step-number">1</span> Choisissez votre produit</h2>
+                        <p>Sélectionnez le type de vêtement</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="produit-options">
+                            <div class="produit-card">
+                                <input type="radio" id="produit-tshirt" name="produit" value="tshirt" checked>
+                                <label for="produit-tshirt">
+                                    <div class="produit-image">
+                                        <img src="../images/textile/tshirt-blanc.jpg" alt="T-shirt">
+                                    </div>
+                                    <div class="produit-info">
+                                        <h3>T-shirt Basic</h3>
+                                        <p>100% coton - 165g/m²</p>
+                                        <ul>
+                                            <li>Manches courtes</li>
+                                            <li>Col rond</li>
+                                            <li>Coupe classique</li>
+                                            <li>Disponible en 10 couleurs</li>
+                                        </ul>
+                                        <div class="produit-prix">
+                                            <span class="prix-unite">12€ HT</span>
+                                            <span class="prix-minimum">(min. 10 pièces)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="produit-card">
+                                <input type="radio" id="produit-polo" name="produit" value="polo">
+                                <label for="produit-polo">
+                                    <div class="produit-image">
+                                        <img src="../images/textile/polo-noir.jpg" alt="Polo">
+                                    </div>
+                                    <div class="produit-info">
+                                        <h3>Polo Professionnel</h3>
+                                        <p>65% polyester / 35% coton</p>
+                                        <ul>
+                                            <li>Col 3 boutons</li>
+                                            <li>Manches courtes</li>
+                                            <li>Tissu stretch</li>
+                                            <li>8 couleurs disponibles</li>
+                                        </ul>
+                                        <div class="produit-prix">
+                                            <span class="prix-unite">18€ HT</span>
+                                            <span class="prix-minimum">(min. 10 pièces)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="produit-card">
+                                <input type="radio" id="produit-sweat" name="produit" value="sweat">
+                                <label for="produit-sweat">
+                                    <div class="produit-image">
+                                        <img src="../images/textile/sweat-gris.jpg" alt="Sweat">
+                                    </div>
+                                    <div class="produit-info">
+                                        <h3>Sweatshirt Premium</h3>
+                                        <p>80% coton / 20% polyester</p>
+                                        <ul>
+                                            <li>Col rond</li>
+                                            <li>Manches longues</li>
+                                            <li>Poids 300g/m²</li>
+                                            <li>6 couleurs disponibles</li>
+                                        </ul>
+                                        <div class="produit-prix">
+                                            <span class="prix-unite">24€ HT</span>
+                                            <span class="prix-minimum">(min. 10 pièces)</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-primary next-step" data-next="step-personnalisation">Suivant : Personnalisation</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 2: Personnalisation -->
+                <div class="config-step" id="step-personnalisation">
+                    <div class="step-header">
+                        <h2><span class="step-number">2</span> Personnalisation</h2>
+                        <p>Choisissez couleurs, tailles et quantités</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="personnalisation-grid">
+                            <!-- Couleurs -->
+                            <div class="config-section">
+                                <h3>Couleur du vêtement</h3>
+                                <div class="couleurs-options" id="couleursOptions">
+                                    <!-- Options chargées dynamiquement -->
+                                </div>
+                            </div>
+                            
+                            <!-- Tailles et quantités -->
+                            <div class="config-section">
+                                <h3>Tailles et quantités</h3>
+                                <p class="section-subtitle">Minimum 10 pièces par commande</p>
+                                
+                                <div class="tailles-tableau">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Taille</th>
+                                                <th>Quantité</th>
+                                                <th>Prix unitaire</th>
+                                                <th>Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="taillesTable">
+                                            <!-- Rempli dynamiquement -->
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3"><strong>Total pièces</strong></td>
+                                                <td id="totalPieces">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3"><strong>Total HT</strong></td>
+                                                <td id="totalHT">0€ HT</td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Upload design -->
+                            <div class="config-section full-width">
+                                <h3>Votre design</h3>
+                                
+                                <div class="upload-design">
+                                    <div class="upload-zone" id="uploadZoneTextile">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                        <p>Glissez-déposez votre logo ici</p>
+                                        <p class="upload-info">Formats : PNG, JPG, AI, EPS - Fond transparent recommandé</p>
+                                        <input type="file" id="fileUploadTextile" accept=".png,.jpg,.jpeg,.ai,.eps">
+                                    </div>
+                                    
+                                    <div class="design-preview" id="designPreview">
+                                        <div class="preview-placeholder">
+                                            <i class="fas fa-image"></i>
+                                            <p>Aperçu du design sur le vêtement</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="design-options">
+                                        <div class="option-group">
+                                            <label for="positionDesign">Position du design</label>
+                                            <select id="positionDesign">
+                                                <option value="poitrine-gauche">Poitrine gauche</option>
+                                                <option value="poitrine-droite">Poitrine droite</option>
+                                                <option value="centré">Centré poitrine</option>
+                                                <option value="dos">Dos complet</option>
+                                                <option value="manche">Manche gauche</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="option-group">
+                                            <label for="tailleDesign">Taille du design (cm)</label>
+                                            <input type="range" id="tailleDesign" min="5" max="30" value="10">
+                                            <span id="tailleValue">10 cm</span>
+                                        </div>
+                                        
+                                        <div class="option-group">
+                                            <label for="technique">Technique de marquage</label>
+                                            <select id="technique">
+                                                <option value="flocage">Flocage (+0€)</option>
+                                                <option value="broderie">Broderie (+3€/pièce)</option>
+                                                <option value="serigraphie">Sérigraphie (+1€/pièce)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Options supplémentaires -->
+                            <div class="config-section">
+                                <h3>Options supplémentaires</h3>
+                                
+                                <div class="options-list">
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option-emballage" name="options">
+                                        <label for="option-emballage">
+                                            <span class="option-title">Emballage individuel</span>
+                                            <span class="option-desc">Chaque pièce sous film plastique</span>
+                                            <span class="option-prix">+0,50€/pièce</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option-etiquette" name="options">
+                                        <label for="option-etiquette">
+                                            <span class="option-title">Étiquette nominative</span>
+                                            <span class="option-desc">Nom sur étiquette intérieure</span>
+                                            <span class="option-prix">+1€/pièce</span>
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="option-item">
+                                        <input type="checkbox" id="option-urgence" name="options">
+                                        <label for="option-urgence">
+                                            <span class="option-title">Production urgente</span>
+                                            <span class="option-desc">Délai réduit à 5 jours</span>
+                                            <span class="option-prix">+15% sur commande</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-produit">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-resume">Suivant : Récapitulatif</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 3: Récapitulatif -->
+                <div class="config-step" id="step-resume">
+                    <div class="step-header">
+                        <h2><span class="step-number">3</span> Récapitulatif</h2>
+                        <p>Vérifiez votre commande avant validation</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="resume-grid">
+                            <div class="resume-details">
+                                <h3>Détails de votre commande</h3>
+                                
+                                <div class="resume-section">
+                                    <h4>Produit</h4>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Type :</span>
+                                        <span class="detail-value" id="resumeProduit">T-shirt Basic</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Couleur :</span>
+                                        <span class="detail-value" id="resumeCouleur">Blanc</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="resume-section">
+                                    <h4>Quantités par taille</h4>
+                                    <div class="tailles-resume" id="taillesResume">
+                                        <!-- Rempli dynamiquement -->
+                                    </div>
+                                </div>
+                                
+                                <div class="resume-section">
+                                    <h4>Personnalisation</h4>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Technique :</span>
+                                        <span class="detail-value" id="resumeTechnique">Flocage</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Position :</span>
+                                        <span class="detail-value" id="resumePosition">Poitrine gauche</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Taille design :</span>
+                                        <span class="detail-value" id="resumeTailleDesign">10 cm</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="resume-section">
+                                    <h4>Options</h4>
+                                    <div class="options-resume" id="optionsResume">
+                                        <p>Aucune option supplémentaire</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="resume-section total">
+                                    <div class="detail-item">
+                                        <span class="detail-label">Total pièces :</span>
+                                        <span class="detail-value" id="resumeTotalPieces">0</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Total HT :</span>
+                                        <span class="detail-value price-total" id="resumeTotalHT">0€ HT</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span class="detail-label">Livraison :</span>
+                                        <span class="detail-value" id="resumeLivraison">Offerte</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="resume-preview">
+                                <div class="preview-finale">
+                                    <h4>Aperçu final</h4>
+                                    <div class="preview-container" id="finalPreviewTextile">
+                                        <div class="vetement-preview">
+                                            <div class="vetement-image">
+                                                <!-- Image dynamique -->
+                                            </div>
+                                            <div class="design-overlay">
+                                                <!-- Design superposé -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="delivery-info">
+                                    <h4>Délais et conditions</h4>
+                                    <ul>
+                                        <li><i class="fas fa-clock"></i> Production : 10-15 jours ouvrés</li>
+                                        <li><i class="fas fa-truck"></i> Livraison offerte dès 30 pièces</li>
+                                        <li><i class="fas fa-undo"></i> Échantillons gratuits sur demande</li>
+                                        <li><i class="fas fa-file-invoice"></i> Facture professionnelle fournie</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="contact-urgent">
+                                    <p><strong>Commande de plus de 100 pièces ?</strong></p>
+                                    <p>Contactez-nous pour un devis personnalisé avec tarif dégressif.</p>
+                                    <a href="../contact.html" class="btn-secondary">Nous contacter</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-actions">
+                            <div class="commande-minimum">
+                                <p><i class="fas fa-info-circle"></i> Commande minimum : 10 pièces</p>
+                            </div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn-secondary" id="modifierTextile">Modifier</button>
+                                <button class="btn-primary" id="ajouterTextilePanier">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panier flottant -->
+            <div class="floating-cart">
+                <div class="cart-summary">
+                    <h4><i class="fas fa-shopping-cart"></i> Votre panier</h4>
+                    <div class="cart-items">
+                        <div class="cart-empty" id="cartEmptyTextile">
+                            <p>Votre panier est vide</p>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total :</span>
+                        <span class="cart-total-price">0€ HT</span>
+                    </div>
+                    <button class="btn-primary" id="voirPanierTextile">Voir le panier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exemples -->
+    <section class="textile-examples">
+        <div class="container">
+            <h2 class="section-title">Exemples de réalisations</h2>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="../images/textile/exemple-entreprise.jpg" alt="Tenues d'entreprise">
+                    </div>
+                    <div class="example-info">
+                        <h3>Tenues d'entreprise</h3>
+                        <p>Polos floqués pour équipes commerciales</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="../images/textile/exemple-evenement.jpg" alt="Événementiel">
+                    </div>
+                    <div class="example-info">
+                        <h3>Événementiel</h3>
+                        <p>T-shirts pour séminaires et conventions</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="../images/textile/exemple-sport.jpg" alt="Équipes sportives">
+                    </div>
+                    <div class="example-info">
+                        <h3>Équipes sportives</h3>
+                        <p>Maillots et survêtements personnalisés</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="textile-faq">
+        <div class="container">
+            <h2 class="section-title">Questions fréquentes</h2>
+            
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quel est le délai de production ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le délai standard est de 10 à 15 jours ouvrés à partir de la validation du BAT (Bon À Tirer). Pour les commandes urgentes, une option "production urgente" permet de réduire le délai à 5 jours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Puis-je commander des échantillons ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Oui, nous proposons des échantillons gratuits des tissus et des techniques de marquage. Contactez-nous pour recevoir notre kit d'échantillons.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelle technique choisir pour mon logo ?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Le flocage est idéal pour les logos simples et les petites séries. La broderie offre un rendu premium pour les polos et vestes. La sérigraphie est recommandée pour les grandes séries et les designs complexes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>Textile personnalisé en ligne.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 02 40 XX XX XX</li>
+                        <li><i class="fas fa-envelope"></i> textile@atelier-enseigne.fr</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne - Configurateur textile</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="textileCartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Votre panier</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="textileCartModalBody">
+                <!-- Contenu dynamique -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="continuerTextile">Continuer</button>
+                <button class="btn-primary" id="commanderTextile">Passer commande</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/configurateur-textile.js"></script>
+</body>
+</html>

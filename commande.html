@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finaliser ma commande | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Finalisez votre commande d'enseignes ou produits personnalisés. Paiement sécurisé en ligne.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <!-- Header -->
+
+	<header class="site-header">
+
+    <!-- BANDE DU HAUT -->
+    <div class="top-bar">
+        <div class="container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="L’Atelier de l’Enseigne">
+            </div>
+
+            <nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="boutique/index.html">Boutique</a></li> <li><a href="realisations/index.html">Réalisations</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="devis.html" class="nav-cta">Devis gratuit</a></li>
+    </ul>
+</nav>
+<div class="header-actions">
+    <a href="contact.html" class="contact-link">Contacts</a> <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+     
+        </div>
+    </div>
+
+    <!-- BANDE DU BAS FIXE -->
+    <div class="services-bar">
+        <div class="container">
+            <ul class="services-menu">
+                <li><a href="services/signaletique-enseignes.html">Enseignes</a></li>
+                <li><a href="services/marquage-vehicules.html">Marquage</a></li>
+				<li><a href="services/textile-personnalise.html">Textile</a></li>
+                <li><a href="services/fermetures-securite.html">Fermetures</a></li>
+                <li><a href="services/creation-sites-web.html">Sites Web</a></li>
+                <li><a href="services/store-banner.html">Store banner</a></li>
+				<li><a href="services/habillage-muraux.html">Rénovation</a></li>
+                <li><a href="services/Communication.html">Communication</a></li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+
+    <!-- Commande Header -->
+    <section class="commande-header">
+        <div class="container">
+            <h1>Finaliser ma commande</h1>
+            <p>Étape 1 sur 3 : Récapitulatif</p>
+        </div>
+    </section>
+
+    <!-- Processus de commande -->
+    <section class="commande-process">
+        <div class="container">
+            <div class="process-steps">
+                <div class="process-step active">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Récapitulatif</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Livraison</div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Paiement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu de la commande -->
+    <section class="commande-content">
+        <div class="container">
+            <div class="commande-grid">
+                <!-- Récapitulatif du panier -->
+                <div class="commande-recap">
+                    <h2>Votre commande</h2>
+                    
+                    <div class="recap-items" id="recapItems">
+                        <!-- Items chargés dynamiquement depuis le panier -->
+                    </div>
+                    
+                    <div class="recap-total">
+                        <div class="total-line">
+                            <span>Sous-total</span>
+                            <span id="sousTotal">0€ HT</span>
+                        </div>
+                        <div class="total-line">
+                            <span>Livraison</span>
+                            <span id="livraisonPrix">Offerte</span>
+                        </div>
+                        <div class="total-line">
+                            <span>TVA (20%)</span>
+                            <span id="tvaPrix">0€</span>
+                        </div>
+                        <div class="total-line total">
+                            <span>Total TTC</span>
+                            <span id="totalTTC">0€</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coupon-section">
+                        <input type="text" id="couponCode" placeholder="Code promo">
+                        <button id="applyCoupon" class="btn-secondary">Appliquer</button>
+                    </div>
+                </div>
+                
+                <!-- Informations client -->
+                <div class="commande-infos">
+                    <div class="info-section">
+                        <h2>Informations de livraison</h2>
+                        
+                        <form id="livraisonForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nom">Nom *</label>
+                                    <input type="text" id="nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="prenom">Prénom *</label>
+                                    <input type="text" id="prenom" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="entreprise">Société (optionnel)</label>
+                                <input type="text" id="entreprise">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="adresse">Adresse *</label>
+                                <input type="text" id="adresse" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="codePostal">Code postal *</label>
+                                    <input type="text" id="codePostal" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ville">Ville *</label>
+                                    <input type="text" id="ville" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pays">Pays *</label>
+                                <select id="pays" required>
+                                    <option value="France">France</option>
+                                    <option value="Belgique">Belgique</option>
+                                    <option value="Suisse">Suisse</option>
+                                    <option value="Luxembourg">Luxembourg</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="telephone">Téléphone *</label>
+                                <input type="tel" id="telephone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" required>
+                            </div>
+                            
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="facturation-different" name="facturation-different">
+                                <label for="facturation-different">Adresse de facturation différente</label>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="instructions">Instructions de livraison (optionnel)</label>
+                                <textarea id="instructions" rows="3" placeholder="Porte de service, interphone, etc."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h2>Mode de livraison</h2>
+                        
+                        <div class="livraison-options">
+                            <div class="livraison-option">
+                                <input type="radio" id="liv-standard" name="livraison" value="standard" checked>
+                                <label for="liv-standard">
+                                    <div class="option-content">
+                                        <h3>Livraison standard</h3>
+                                        <p>Colis suivi - Livraison sous 10-15 jours</p>
+                                        <span class="option-price">Offerte</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="livraison-option">
+                                <input type="radio" id="liv-express" name="livraison" value="express">
+                                <label for="liv-express">
+                                    <div class="option-content">
+                                        <h3>Livraison express</h3>
+                                        <p>Chronopost - Livraison sous 5-7 jours</p>
+                                        <span class="option-price">+ 29€ HT</span>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="livraison-option">
+                                <input type="radio" id="liv-install" name="livraison" value="install">
+                                <label for="liv-install">
+                                    <div class="option-content">
+                                        <h3>Avec installation</h3>
+                                        <p>Livraison et installation par nos techniciens</p>
+                                        <span class="option-price">Sur devis</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="commande-actions">
+                        <a href="boutique/index.html" class="btn-secondary">Retour à la boutique</a>
+                        <button id="continuerCommande" class="btn-primary">Continuer vers le paiement</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sécurité -->
+    <section class="commande-securite">
+        <div class="container">
+            <div class="securite-grid">
+                <div class="securite-item">
+                    <i class="fas fa-lock"></i>
+                    <h3>Paiement sécurisé</h3>
+                    <p>Transactions cryptées SSL</p>
+                </div>
+                
+                <div class="securite-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Confidentialité</h3>
+                    <p>Vos données sont protégées</p>
+                </div>
+                
+                <div class="securite-item">
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Multiples paiements</h3>
+                    <p>Carte bancaire, virement, chèque</p>
+                </div>
+                
+                <div class="securite-item">
+                    <i class="fas fa-headset"></i>
+                    <h3>Support client</h3>
+                    <p>À votre écoute au 02 40 XX XX XX</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>Votre commande en toute sécurité.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Informations</h4>
+                    <ul>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Paiement sécurisé</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Besoin d'aide ?</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 02 40 XX XX XX</li>
+                        <li><i class="fas fa-envelope"></i> commande@atelier-enseigne.fr</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne - Page de commande</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal confirmation -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Confirmation de commande</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="confirmation-content" id="confirmationContent">
+                    <!-- Contenu dynamique -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/commande.js"></script>
+</body>
+</html>

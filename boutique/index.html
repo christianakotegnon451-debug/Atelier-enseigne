@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Rénover, c’est repenser votre espace pour plus de confort, de valeur et de bien-être au quotidien.">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <header class="site-header">
+    <div class="top-bar">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html"><img src="../images/logo.png" alt="L’Atelier de l’Enseigne"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="../boutique/index.html">Boutique</a></li> 
+                    <li><a href="../realisations/index.html">Réalisations</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../devis.html" class="nav-cta">Devis gratuit</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="../contact.html" class="contact-link">Contacts</a> 
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="services-bar">
+        <div class="container">
+            <ul class="services-menu">
+                <li><a href="../services/signaletique-enseignes.html">Enseignes</a></li>
+                <li><a href="../services/marquage-vehicules.html">Marquage</a></li>
+                <li><a href="../services/textile-personnalise.html">Textile</a></li>
+                <li><a href="../services/fermetures-securite.html">Fermetures</a></li>
+                <li><a href="../services/creation-sites-web.html">Sites Web</a></li>
+                <li><a href="../servicess/tore-banne.html">Store banne</a></li>
+                <li><a href="../services/habillage-muraux.html">Rénovation</a></li>
+                <li><a href="../services/Communication.html">Communication</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+    <!-- Boutique Header -->
+<section class="page-header">
+    <div class="container">
+        <h1>Personnalisation rapide</h1>
+<p>
+Des créations décoratives personnalisées pour l’intérieur, 
+pensées pour les particuliers et les petits projets.
+</p>
+    </div>
+</section>
+
+	<div class="custom-grid">
+
+  <div class="custom-card">
+    <img src="../images/custom/prenom-led.jpg" alt="Prénom lumineux">
+    <h3>Prénom lumineux LED</h3>
+    <p>Décoration personnalisée pour intérieur.</p>
+    <ul>
+      <li>Couleur au choix</li>
+      <li>Fixation murale ou à poser</li>
+      <li>Usage intérieur</li>
+    </ul>
+   <button class="btn-secondary open-configurator"
+        data-product="prenom-led">
+  Personnaliser
+</button>
+
+  </div>
+
+  <div class="custom-card">
+    <img src="../images/custom/plaque-deco.jpg" alt="Plaque décorative">
+    <h3>Plaque décorative</h3>
+    <p>Plaque personnalisée pour décoration ou cadeau.</p>
+    <ul>
+      <li>Plexiglas, PVC ou bois</li>
+      <li>Texte ou motif</li>
+      <li>Formats standards</li>
+    </ul>
+    <button class="btn-secondary open-configurator"
+        data-product="plaque-deco">
+  Personnaliser
+</button>
+
+  </div>
+
+</div>
+
+	<div class="redirect-box">
+  <p>
+    Vous avez un projet professionnel, une enseigne ou un marquage ?
+  </p>
+  <a href="../realisations/index.html" class="btn-outline">
+    Découvrir nos services professionnels
+  </a>
+</div>
+
+	<div class="configurator-modal" id="configuratorModal">
+  <div class="configurator-box">
+
+    <button class="close-modal">&times;</button>
+
+    <h2 id="configuratorTitle">Personnalisation</h2>
+    <p class="configurator-subtitle">
+      Configurez votre création décorative
+    </p>
+
+    <form class="configurator-form">
+
+      <input type="hidden" id="productType">
+
+      <div class="form-group">
+        <label>Texte / Prénom</label>
+        <input type="text" placeholder="Ex : Lucas">
+      </div>
+
+      <div class="form-group">
+        <label>Couleur</label>
+        <select>
+          <option>Blanc</option>
+          <option>Rouge</option>
+          <option>Bleu</option>
+          <option>Rose</option>
+          <option>Multicolore</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Dimensions approximatives</label>
+        <select>
+          <option>30 cm</option>
+          <option>50 cm</option>
+          <option>70 cm</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Message complémentaire</label>
+        <textarea placeholder="Fixation, usage, délai souhaité…"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary full-width">
+        Envoyer ma demande
+      </button>
+
+    </form>
+
+  </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>Personnalisez et commandez vos produits en ligne.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Boutique</h4>
+                    <ul>
+                        <li><a href="configurateur-enseignes.html">Enseignes</a></li>
+                        <li><a href="configurateur-stickers.html">Stickers</a></li>
+                        <li><a href="configurateur-textile.html">Textile</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Informations</h4>
+                    <ul>
+                        <li><a href="#">Livraison</a></li>
+                        <li><a href="#">Paiement sécurisé</a></li>
+                        <li><a href="#">Retours</a></li>
+                        <li><a href="#">CGV</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i>+33 6 51 76 25 81</li>
+                        <li><i class="fas fa-envelope"></i> boutique@atelier-enseigne.fr</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne - Boutique en ligne</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/boutique.js"></script>
+</body>
+</html>

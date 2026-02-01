@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Contactez L'Atelier de l'Enseigne à Nantes. Formulaire de contact, téléphone, email et plan d'accès.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <!-- Header -->
+
+	<header class="site-header">
+
+    <!-- BANDE DU HAUT -->
+    <div class="top-bar">
+        <div class="container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="L’Atelier de l’Enseigne">
+            </div>
+
+            <nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="boutique/index.html">Boutique</a></li> <li><a href="realisations/index.html">Réalisations</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="devis.html" class="nav-cta">Devis gratuit</a></li>
+    </ul>
+</nav>
+<div class="header-actions">
+    <a href="contact.html" class="contact-link">Contacts</a> <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+     
+        </div>
+    </div>
+
+    <!-- BANDE DU BAS FIXE -->
+    <div class="services-bar">
+        <div class="container">
+            <ul class="services-menu">
+                <li><a href="services/signaletique-enseignes.html">Enseignes</a></li>
+                <li><a href="services/marquage-vehicules.html">Marquage</a></li>
+				<li><a href="services/textile-personnalise.html">Textile</a></li>
+                <li><a href="services/fermetures-securite.html">Fermetures</a></li>
+                <li><a href="services/creation-sites-web.html">Sites Web</a></li>
+                <li><a href="services/store-banner.html">Store banner</a></li>
+				<li><a href="services/habillage-muraux.html">Rénovation</a></li>
+                <li><a href="services/Communication.html">Communication</a></li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Notre équipe est à votre écoute pour tous vos projets</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info-section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <h3>Téléphone</h3>
+                <p>+33 6 51 76 25 81</p>
+                <p class="contact-hours">Lun–Ven : 8h30 – 18h</p>
+                <a href="tel:+33651762581" class="contact-link-btn">Appeler</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email</h3>
+                <p>contact@atelierdelenseigne.fr</p>
+                <p class="contact-hours">Réponse sous 24h</p>
+                <a href="mailto:contact@atelierdelenseigne.fr" class="contact-link-btn">Envoyer un email</a>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Zone d’intervention</h3>
+                <p>Île-de-France</p>
+                <p class="contact-hours">Intervention possible partout en France</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Notre équipe</h3>
+                <p>Une équipe de 2 professionnels</p>
+                <p class="contact-hours">Accompagnement personnalisé</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Contact Form & Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-map-grid">
+                <!-- Formulaire -->
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un message</h2>
+                    <p>Remplissez ce formulaire, nous vous répondrons rapidement</p>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-nom">Nom / Société *</label>
+                                <input type="text" id="contact-nom" name="nom" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-email">Email *</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-telephone">Téléphone *</label>
+                                <input type="tel" id="contact-telephone" name="telephone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contact-service">Service concerné</label>
+                                <select id="contact-service" name="service">
+                                    <option value="">Choisir un service</option>
+                                    <option value="enseigne">Enseignes & Signalétique</option>
+                                    <option value="vehicule">Marquage Véhicules</option>
+                                    <option value="textile">Textile Personnalisé</option>
+                                    <option value="site">Création Site Web</option>
+                                    <option value="rideau">Rideaux Métalliques</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-sujet">Sujet *</label>
+                            <input type="text" id="contact-sujet" name="sujet" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Message *</label>
+                            <textarea id="contact-message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="contact-newsletter" name="newsletter">
+                            <label for="contact-newsletter">Je souhaite recevoir les actualités et offres</label>
+                        </div>
+                        
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="contact-consent" name="consent" required>
+                            <label for="contact-consent">J'accepte que mes données soient utilisées pour traiter ma demande *</label>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary submit-btn">Envoyer le message</button>
+                    </form>
+                    
+                    <div class="form-success" id="contactSuccess" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Message envoyé !</h3>
+                        <p>Merci pour votre message. Nous vous répondrons dans les plus brefs délais.</p>
+                    </div>
+                </div>
+                
+                <!-- Carte -->
+            <div class="contact-map-container">
+    <h2>Notre zone d’intervention</h2>
+
+    <div class="map-wrapper">
+    <iframe
+        src="https://www.google.com/maps?q=Île-de-France&output=embed"
+        width="100%"
+        height="300"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy">
+    </iframe>
+</div>
+<p class="map-disclaimer">
+    Localisation indicative – adresse communiquée uniquement sur rendez-vous
+</p>
+
+
+    <div class="rdv-section" id="rdv">
+        <h3>Prendre rendez-vous</h3>
+        <p>Échange téléphonique ou rendez-vous à distance selon votre projet.</p>
+        <div class="rdv-buttons">
+            <button class="btn-secondary" id="rdv-phone">
+                <i class="fas fa-phone"></i> Rendez-vous téléphonique
+            </button>
+            <button class="btn-secondary" id="rdv-atelier">
+                <i class="fas fa-video"></i> Rendez-vous à distance
+            </button>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Contact -->
+    <section class="contact-faq">
+    <div class="container">
+        <h2 class="section-title">Questions fréquentes</h2>
+
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Sous quel délai répondez-vous ?</h3>
+                <p>Nous répondons à toutes les demandes sous 24h ouvrées.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Où êtes-vous situés ?</h3>
+                <p>Nous sommes basés en Île-de-France et intervenons partout en France selon les projets.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Travaillez-vous avec les professionnels et les particuliers ?</h3>
+                <p>Oui, nous accompagnons aussi bien les entreprises que les particuliers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Peut-on vous rencontrer ?</h3>
+                <p>Oui, sur rendez-vous. Un premier échange téléphonique est recommandé.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>À votre écoute pour tous vos projets de visibilité.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact rapide</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> +33 6 51 76 25 81</li>
+                        <li><i class="fas fa-envelope"></i> contact@atelierdelenseigne.fr</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h30-18h</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="devis.html">Demande de devis</a></li>
+                        <li><a href="boutique/index.html">Boutique en ligne</a></li>
+                        <li><a href="realisations/index.html">Nos réalisations</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Rendez-vous -->
+    <div id="rdvModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Prendre rendez-vous</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="rdvForm">
+                    <div class="form-group">
+                        <label for="rdv-type">Type de rendez-vous</label>
+                        <select id="rdv-type" name="type">
+                            <option value="telephone">Téléphonique</option>
+                            <option value="atelier">En atelier</option>
+                            <option value="visio">Visio-conférence</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rdv-date">Date souhaitée</label>
+                        <input type="date" id="rdv-date" name="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rdv-heure">Créneau horaire</label>
+                        <select id="rdv-heure" name="heure" required>
+                            <option value="">Choisir un créneau</option>
+                            <option value="9h">9h00 - 10h00</option>
+                            <option value="10h">10h00 - 11h00</option>
+                            <option value="11h">11h00 - 12h00</option>
+                            <option value="14h">14h00 - 15h00</option>
+                            <option value="15h">15h00 - 16h00</option>
+                            <option value="16h">16h00 - 17h00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="rdv-sujet">Sujet du rendez-vous</label>
+                        <textarea id="rdv-sujet" name="sujet" rows="3"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary">Demander le rendez-vous</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

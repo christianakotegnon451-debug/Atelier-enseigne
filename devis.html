@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demande de devis | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Demandez un devis gratuit pour vos projets d'enseignes, signalétique, flocage ou création de site web.">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+      <!-- Header -->
+
+	<header class="site-header">
+
+    <!-- BANDE DU HAUT -->
+    <div class="top-bar">
+        <div class="container">
+
+            <div class="logo">
+                <img src="images/logo.png" alt="L’Atelier de l’Enseigne">
+            </div>
+
+            <nav class="main-nav">
+    <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="boutique/index.html">Boutique</a></li> <li><a href="realisations/index.html">Réalisations</a></li>
+        <li><a href="a-propos.html">À propos</a></li>
+        <li><a href="devis.html" class="nav-cta">Devis gratuit</a></li>
+    </ul>
+</nav>
+<div class="header-actions">
+    <a href="contact.html" class="contact-link">Contacts</a> <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+</div>
+     
+        </div>
+    </div>
+
+    <!-- BANDE DU BAS FIXE -->
+    <div class="services-bar">
+        <div class="container">
+            <ul class="services-menu">
+                <li><a href="services/signaletique-enseignes.html">Enseignes</a></li>
+                <li><a href="services/marquage-vehicules.html">Marquage</a></li>
+				<li><a href="services/textile-personnalise.html">Textile</a></li>
+                <li><a href="services/fermetures-securite.html">Fermetures</a></li>
+                <li><a href="services/creation-sites-web.html">Sites Web</a></li>
+                <li><a href="services/store-banner.html">Store banner</a></li>
+				<li><a href="services/habillage-muraux.html">Rénovation</a></li>
+                <li><a href="services/Communication.html">Communication</a></li>
+            </ul>
+        </div>
+    </div>
+
+</header>
+
+    <!-- Devis Header -->
+    <section class="devis-header">
+        <div class="container">
+            <h1>Demande de devis gratuit</h1>
+            <p>Recevez un devis personnalisé sous 24h ouvrées</p>
+        </div>
+    </section>
+
+    <!-- Devis Form -->
+    <section class="devis-form-section">
+        <div class="container">
+            <div class="devis-steps">
+                <div class="step active">1. Service</div>
+                <div class="step">2. Détails</div>
+                <div class="step">3. Contact</div>
+            </div>
+            
+            <form id="devisForm" class="devis-form">
+                <!-- Step 1: Service Selection -->
+                <div class="form-step active" id="step1">
+                    <h2>Quel service vous intéresse ?</h2>
+                    
+                    <div class="service-options">
+                        <div class="service-option">
+                            <input type="radio" id="service-enseigne" name="service" value="enseigne">
+                            <label for="service-enseigne">
+                                <div class="option-icon">
+                                    <i class="fas fa-store-alt"></i>
+                                </div>
+                                <h3>Enseigne & Signalétique</h3>
+                                <p>Enseignes lumineuses, panneaux, totems</p>
+                            </label>
+                        </div>
+                        
+                        <div class="service-option">
+                            <input type="radio" id="service-vehicule" name="service" value="vehicule">
+                            <label for="service-vehicule">
+                                <div class="option-icon">
+                                    <i class="fas fa-car"></i>
+                                </div>
+                                <h3>Marquage Véhicule</h3>
+                                <p>Flocage, adhésifs, stickers véhicules</p>
+                            </label>
+                        </div>
+                        
+                        <div class="service-option">
+                            <input type="radio" id="service-textile" name="service" value="textile">
+                            <label for="service-textile">
+                                <div class="option-icon">
+                                    <i class="fas fa-tshirt"></i>
+                                </div>
+                                <h3>Textile Personnalisé</h3>
+                                <p>T-shirts, polos, vêtements floqués</p>
+                            </label>
+                        </div>
+                        
+                        <div class="service-option">
+                            <input type="radio" id="service-site" name="service" value="site">
+                            <label for="service-site">
+                                <div class="option-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <h3>Site Web</h3>
+                                <p>Création site vitrine, WordPress, SEO</p>
+                            </label>
+                        </div>
+                        
+                        <div class="service-option">
+                            <input type="radio" id="service-rideau" name="service" value="rideau">
+                            <label for="service-rideau">
+                                <div class="option-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>Rideau Métallique</h3>
+                                <p>Installation, dépannage, personnalisation</p>
+                            </label>
+                        </div>
+                        
+                        <div class="service-option">
+                            <input type="radio" id="service-autre" name="service" value="autre">
+                            <label for="service-autre">
+                                <div class="option-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <h3>Autre projet</h3>
+                                <p>Projet spécifique ou combinaison</p>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn-primary next-step" data-next="step2">Suivant</button>
+                    </div>
+                </div>
+                
+                <!-- Step 2: Details -->
+                <div class="form-step" id="step2">
+                    <h2>Détails du projet</h2>
+                    
+                    <div class="form-group">
+                        <label for="dimensions">Dimensions (si applicable)</label>
+                        <input type="text" id="dimensions" name="dimensions" placeholder="Ex: 100cm x 60cm">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quantite">Quantité</label>
+                        <input type="number" id="quantite" name="quantite" min="1" placeholder="Ex: 1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description du projet</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Décrivez votre projet en détail..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="fichier">Joindre des fichiers</label>
+                        <div class="file-upload">
+                            <input type="file" id="fichier" name="fichier" accept=".jpg,.jpeg,.png,.pdf,.ai">
+                            <label for="fichier">
+                                <i class="fas fa-upload"></i>
+                                <span>Télécharger des fichiers (logo, croquis...)</span>
+                            </label>
+                        </div>
+                        <small>Formats acceptés : JPG, PNG, PDF, AI - Max 10MB</small>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step" data-prev="step1">Retour</button>
+                        <button type="button" class="btn-primary next-step" data-next="step3">Suivant</button>
+                    </div>
+                </div>
+                
+                <!-- Step 3: Contact -->
+                <div class="form-step" id="step3">
+                    <h2>Vos coordonnées</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom">Nom / Société *</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ville">Ville *</label>
+                            <input type="text" id="ville" name="ville" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message complémentaire</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Informations supplémentaires..."></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Je souhaite recevoir les actualités et offres</label>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="consentement" name="consentement" required>
+                        <label for="consentement">J'accepte que mes données soient utilisées pour traiter ma demande *</label>
+                    </div>
+                    
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary prev-step" data-prev="step2">Retour</button>
+                        <button type="submit" class="btn-primary">Envoyer la demande</button>
+                    </div>
+                </div>
+                
+                <!-- Success Message -->
+                <div class="form-success" id="successMessage" style="display: none;">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Demande envoyée !</h2>
+                    <p>Merci pour votre demande. Nous vous répondrons sous 24h ouvrées.</p>
+                    <p>Un email de confirmation vous a été envoyé.</p>
+                    <a href="index.html" class="btn-primary">Retour à l'accueil</a>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Assurance -->
+    <section class="assurance-section">
+        <div class="container">
+            <div class="assurance-grid">
+                <div class="assurance-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Réponse sous 24h</h3>
+                    <p>Devis gratuit et personnalisé</p>
+                </div>
+                
+                <div class="assurance-item">
+                    <i class="fas fa-euro-sign"></i>
+                    <h3>Transparence des prix</h3>
+                    <p>Pas de frais cachés</p>
+                </div>
+                
+                <div class="assurance-item">
+                    <i class="fas fa-user-check"></i>
+                    <h3>Accompagnement</h3>
+                    <p>Conseils personnalisés</p>
+                </div>
+                
+                <div class="assurance-item">
+                    <i class="fas fa-truck"></i>
+                    <h3>Installation</h3>
+                    <p>Pose par nos équipes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>Devis gratuit pour tous vos projets de visibilité.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact rapide</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 02 40 XX XX XX</li>
+                        <li><i class="fas fa-envelope"></i> devis@atelier-enseigne.fr</li>
+                        <li><i class="fas fa-clock"></i> Lun-Ven: 8h30-18h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/formulaire.js"></script>
+</body>
+</html>

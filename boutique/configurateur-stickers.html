@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurateur de Stickers | L'Atelier de l'Enseigne</title>
+    <meta name="description" content="Créez vos stickers personnalisés en ligne. Choix du format, matériau, quantité et impression.">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/configurateur.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#">Nos Services <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../services/signaletique-enseignes.html">Signalétique & Enseignes</a></li>
+                            <li><a href="../services/marquage-vehicules.html">Marquage Véhicules</a></li>
+                            <li><a href="../services/textile-personnalise.html">Textile Personnalisé</a></li>
+                            <li><a href="../services/fermetures-securite.html">Fermetures & Sécurité</a></li>
+                            <li><a href="../services/creation-sites-web.html">Création de Sites Web</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../realisations/index.html">Nos Réalisations</a></li>
+                    <li><a href="index.html" class="active">Boutique</a></li>
+                    <li><a href="../a-propos.html">À propos</a></li>
+                    <li><a href="../devis.html" class="cta-button">Devis gratuit</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="cart-icon">
+                    <a href="#panier"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                </div>
+                <a href="../contact.html" class="contact-link"><i class="fas fa-phone-alt"></i> 02 40 XX XX XX</a>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Configurateur Header -->
+    <section class="config-header">
+        <div class="container">
+            <h1>Configurateur de Stickers</h1>
+            <p>Personnalisez vos stickers et adhésifs en quelques étapes</p>
+        </div>
+    </section>
+
+    <!-- Configurateur -->
+    <section class="configurateur-section">
+        <div class="container">
+            <div class="configurateur-wrapper">
+                <!-- Étape 1: Type de sticker -->
+                <div class="config-step active" id="step-type">
+                    <div class="step-header">
+                        <h2><span class="step-number">1</span> Type de sticker</h2>
+                        <p>Choisissez l'usage de votre sticker</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="type-options">
+                            <div class="type-card">
+                                <input type="radio" id="type-vitrine" name="type" value="vitrine" checked>
+                                <label for="type-vitrine">
+                                    <div class="type-icon">
+                                        <i class="fas fa-store"></i>
+                                    </div>
+                                    <h3>Sticker Vitrine</h3>
+                                    <p>Pour vos vitrines et portes de commerce</p>
+                                    <ul>
+                                        <li>Vinyle haute adhérence</li>
+                                        <li>Résiste aux rayons UV</li>
+                                        <li>Découpe précise</li>
+                                    </ul>
+                                    <div class="type-price">À partir de 45€ HT</div>
+                                </label>
+                            </div>
+                            
+                            <div class="type-card">
+                                <input type="radio" id="type-vehicule" name="type" value="vehicule">
+                                <label for="type-vehicule">
+                                    <div class="type-icon">
+                                        <i class="fas fa-car"></i>
+                                    </div>
+                                    <h3>Sticker Véhicule</h3>
+                                    <p>Pour le flocage de vos véhicules</p>
+                                    <ul>
+                                        <li>Vinyle automotive</li>
+                                        <li>Résiste aux lavages</li>
+                                        <li>Garantie 5 ans</li>
+                                    </ul>
+                                    <div class="type-price">À partir de 89€ HT</div>
+                                </label>
+                            </div>
+                            
+                            <div class="type-card">
+                                <input type="radio" id="type-interieur" name="type" value="interieur">
+                                <label for="type-interieur">
+                                    <div class="type-icon">
+                                        <i class="fas fa-home"></i>
+                                    </div>
+                                    <h3>Sticker Intérieur</h3>
+                                    <p>Pour la décoration et la signalétique intérieure</p>
+                                    <ul>
+                                        <li>Vinyle repositionnable</li>
+                                        <li>Facile à poser</li>
+                                        <li>Sans trace au retrait</li>
+                                    </ul>
+                                    <div class="type-price">À partir de 29€ HT</div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-primary next-step" data-next="step-format">Suivant : Format</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 2: Format -->
+                <div class="config-step" id="step-format">
+                    <div class="step-header">
+                        <h2><span class="step-number">2</span> Format</h2>
+                        <p>Choisissez la taille et la forme de vos stickers</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="format-options">
+                            <div class="format-preset">
+                                <input type="radio" id="format-a4" name="format" value="a4" checked>
+                                <label for="format-a4">
+                                    <div class="format-size">A4 (21x29,7cm)</div>
+                                    <div class="format-price">45€ HT</div>
+                                    <div class="format-desc">Idéal pour les logos et textes</div>
+                                </label>
+                            </div>
+                            
+                            <div class="format-preset">
+                                <input type="radio" id="format-a3" name="format" value="a3">
+                                <label for="format-a3">
+                                    <div class="format-size">A3 (29,7x42cm)</div>
+                                    <div class="format-price">79€ HT</div>
+                                    <div class="format-desc">Pour plus de visibilité</div>
+                                </label>
+                            </div>
+                            
+                            <div class="format-preset">
+                                <input type="radio" id="format-a2" name="format" value="a2">
+                                <label for="format-a2">
+                                    <div class="format-size">A2 (42x59,4cm)</div>
+                                    <div class="format-price">129€ HT</div>
+                                    <div class="format-desc">Grand format pour vitrine</div>
+                                </label>
+                            </div>
+                            
+                            <div class="format-preset">
+                                <input type="radio" id="format-surmesure" name="format" value="surmesure">
+                                <label for="format-surmesure">
+                                    <div class="format-size">Sur mesure</div>
+                                    <div class="format-price">Devis personnalisé</div>
+                                    <div class="format-desc">Dimensions personnalisées</div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="format-custom" id="custom-format" style="display: none;">
+                            <div class="custom-inputs">
+                                <div class="input-group">
+                                    <label for="largeur-sticker">Largeur (cm)</label>
+                                    <input type="number" id="largeur-sticker" min="10" max="200" value="21">
+                                </div>
+                                
+                                <div class="input-group">
+                                    <label for="hauteur-sticker">Hauteur (cm)</label>
+                                    <input type="number" id="hauteur-sticker" min="10" max="200" value="29.7">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="quantity-section">
+                            <h4>Quantité</h4>
+                            <div class="quantity-control">
+                                <button class="qty-btn" data-action="decrease">-</button>
+                                <input type="number" id="quantite-sticker" value="1" min="1" max="100">
+                                <button class="qty-btn" data-action="increase">+</button>
+                                <span class="qty-info">(Prix à l'unité)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-type">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-materiau">Suivant : Matériau</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 3: Matériau -->
+                <div class="config-step" id="step-materiau">
+                    <div class="step-header">
+                        <h2><span class="step-number">3</span> Matériau</h2>
+                        <p>Choisissez le vinyle adapté à votre besoin</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="materiau-options">
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-standard" name="materiau" value="standard" checked>
+                                <label for="materiau-standard">
+                                    <div class="materiau-info">
+                                        <h3>Vinyle Standard</h3>
+                                        <p>Pour usage intérieur ou extérieur protégé</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-sun"></i> 3 ans d'extérieur</span>
+                                            <span><i class="fas fa-euro-sign"></i> Économique</span>
+                                        </div>
+                                        <div class="materiau-price">+ 0€</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-premium" name="materiau" value="premium">
+                                <label for="materiau-premium">
+                                    <div class="materiau-info">
+                                        <h3>Vinyle Premium</h3>
+                                        <p>Haute résistance aux intempéries et UV</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-sun"></i> 7 ans d'extérieur</span>
+                                            <span><i class="fas fa-shield-alt"></i> Haute résistance</span>
+                                        </div>
+                                        <div class="materiau-price">+ 25%</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-repositionnable" name="materiau" value="repositionnable">
+                                <label for="materiau-repositionnable">
+                                    <div class="materiau-info">
+                                        <h3>Vinyle Repositionnable</h3>
+                                        <p>Idéal pour location ou décoration temporaire</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-exchange-alt"></i> Repositionnable</span>
+                                            <span><i class="fas fa-times-circle"></i> Sans trace</span>
+                                        </div>
+                                        <div class="materiau-price">+ 15%</div>
+                                    </div>
+                                </label>
+                            </div>
+                            
+                            <div class="materiau-card">
+                                <input type="radio" id="materiau-fluo" name="materiau" value="fluo">
+                                <label for="materiau-fluo">
+                                    <div class="materiau-info">
+                                        <h3>Vinyle Fluorescent</h3>
+                                        <p>Maximum de visibilité, couleurs vibrantes</p>
+                                        <div class="materiau-specs">
+                                            <span><i class="fas fa-lightbulb"></i> Haute visibilité</span>
+                                            <span><i class="fas fa-palette"></i> Couleurs vives</span>
+                                        </div>
+                                        <div class="materiau-price">+ 35%</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-format">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-finish">Suivant : Finition</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 4: Finition -->
+                <div class="config-step" id="step-finish">
+                    <div class="step-header">
+                        <h2><span class="step-number">4</span> Finition</h2>
+                        <p>Choisissez la finition de vos stickers</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="finish-options">
+                            <div class="finish-card">
+                                <input type="radio" id="finish-contour" name="finish" value="contour" checked>
+                                <label for="finish-contour">
+                                    <div class="finish-icon">
+                                        <i class="fas fa-crop"></i>
+                                    </div>
+                                    <h3>Découpe contour</h3>
+                                    <p>Le sticker est découpé aux contours de votre design</p>
+                                    <div class="finish-price">+ 0€</div>
+                                </label>
+                            </div>
+                            
+                            <div class="finish-card">
+                                <input type="radio" id="finish-lettrage" name="finish" value="lettrage">
+                                <label for="finish-lettrage">
+                                    <div class="finish-icon">
+                                        <i class="fas fa-font"></i>
+                                    </div>
+                                    <h3>Découpe lettrage</h3>
+                                    <p>Chaque lettre est découpée individuellement</p>
+                                    <div class="finish-price">+ 20€</div>
+                                </label>
+                            </div>
+                            
+                            <div class="finish-card">
+                                <input type="radio" id="finish-kisscut" name="finish" value="kisscut">
+                                <label for="finish-kisscut">
+                                    <div class="finish-icon">
+                                        <i class="fas fa-sticky-note"></i>
+                                    </div>
+                                    <h3>Kiss-cut</h3>
+                                    <p>Le sticker reste sur son support pour pose facilitée</p>
+                                    <div class="finish-price">+ 10€</div>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <div class="upload-section">
+                            <h4>Téléchargez votre fichier</h4>
+                            <div class="upload-area" id="uploadAreaSticker">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Glissez-déposez votre fichier ici</p>
+                                <p class="upload-info">Formats : AI, EPS, PDF, JPG, PNG - Max 20MB</p>
+                                <input type="file" id="fileUploadSticker" accept=".ai,.eps,.pdf,.jpg,.jpeg,.png">
+                            </div>
+                            <div class="upload-requirements">
+                                <h5>Recommandations :</h5>
+                                <ul>
+                                    <li>Vectoriel (AI, EPS) pour une qualité optimale</li>
+                                    <li>Résolution minimum 300 DPI pour les images</li>
+                                    <li>Convertir les textes en courbes</li>
+                                    <li>Prévoir des fonds perdus de 3mm</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="step-navigation">
+                        <button class="btn-secondary prev-step" data-prev="step-materiau">Retour</button>
+                        <button class="btn-primary next-step" data-next="step-resume">Suivant : Récapitulatif</button>
+                    </div>
+                </div>
+                
+                <!-- Étape 5: Récapitulatif -->
+                <div class="config-step" id="step-resume">
+                    <div class="step-header">
+                        <h2><span class="step-number">5</span> Récapitulatif</h2>
+                        <p>Vérifiez votre configuration avant commande</p>
+                    </div>
+                    
+                    <div class="step-content">
+                        <div class="resume-grid">
+                            <div class="resume-details">
+                                <h3>Configuration de vos stickers</h3>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Type :</span>
+                                    <span class="detail-value" id="resumeType">Sticker Vitrine</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Format :</span>
+                                    <span class="detail-value" id="resumeFormat">A4 (21x29,7cm)</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Quantité :</span>
+                                    <span class="detail-value" id="resumeQuantite">1</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Matériau :</span>
+                                    <span class="detail-value" id="resumeMateriau">Vinyle Standard</span>
+                                </div>
+                                
+                                <div class="detail-item">
+                                    <span class="detail-label">Finition :</span>
+                                    <span class="detail-value" id="resumeFinish">Découpe contour</span>
+                                </div>
+                                
+                                <div class="detail-item total">
+                                    <span class="detail-label">Total :</span>
+                                    <span class="detail-value price-total" id="resumeTotal">45€ HT</span>
+                                </div>
+                            </div>
+                            
+                            <div class="resume-preview">
+                                <div class="preview-card">
+                                    <h4>Aperçu de votre sticker</h4>
+                                    <div class="sticker-preview" id="stickerPreview">
+                                        <div class="preview-placeholder">
+                                            <i class="fas fa-sticky-note"></i>
+                                            <p>Votre design apparaîtra ici</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="delivery-info">
+                                    <h4>Délais et livraison</h4>
+                                    <ul>
+                                        <li><i class="fas fa-clock"></i> Production : 5-7 jours ouvrés</li>
+                                        <li><i class="fas fa-truck"></i> Livraison offerte en France</li>
+                                        <li><i class="fas fa-box"></i> Emballage carton rigide</li>
+                                        <li><i class="fas fa-tools"></i> Notice de pose incluse</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="resume-actions">
+                            <div class="contact-option">
+                                <p><strong>Besoin d'aide pour votre design ?</strong> Notre équipe graphique peut vous aider.</p>
+                                <a href="../contact.html" class="btn-secondary">Demander assistance</a>
+                            </div>
+                            
+                            <div class="order-buttons">
+                                <button class="btn-secondary" id="modifyStickerConfig">Modifier la configuration</button>
+                                <button class="btn-primary" id="addStickerToCart">Ajouter au panier</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panier flottant -->
+            <div class="floating-cart">
+                <div class="cart-summary">
+                    <h4><i class="fas fa-shopping-cart"></i> Votre panier</h4>
+                    <div class="cart-items">
+                        <div class="cart-empty" id="cartEmptySticker">
+                            <p>Votre panier est vide</p>
+                        </div>
+                    </div>
+                    <div class="cart-total">
+                        <span>Total :</span>
+                        <span class="cart-total-price">0€ HT</span>
+                    </div>
+                    <button class="btn-primary" id="viewCartSticker">Voir le panier</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exemples -->
+    <section class="sticker-examples">
+        <div class="container">
+            <h2 class="section-title">Exemples d'utilisation</h2>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="../images/stickers/vitrine-exemple.jpg" alt="Sticker vitrine">
+                    </div>
+                    <div class="example-info">
+                        <h3>Vitrine de boutique</h3>
+                        <p>Logo, horaires et informations sur vitrine</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="../images/stickers/vehicule-exemple.jpg" alt="Sticker véhicule">
+                    </div>
+                    <div class="example-info">
+                        <h3>Flocage véhicule</h3>
+                        <p>Marquage professionnel pour véhicules utilitaires</p>
+                    </div>
+                </div>
+                
+                <div class="example-card">
+                    <div class="example-image">
+                        <img src="../images/stickers/signaletique-exemple.jpg" alt="Signalétique intérieure">
+                    </div>
+                    <div class="example-info">
+                        <h3>Signalétique intérieure</h3>
+                        <p>Plaques de porte et panneaux directionnels</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo">
+                        <a href="../index.html">
+                            <span class="logo-text">L'Atelier de <span class="logo-highlight">l'Enseigne</span></span>
+                        </a>
+                    </div>
+                    <p>Créez vos stickers personnalisés en ligne.</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> 02 40 XX XX XX</li>
+                        <li><i class="fas fa-envelope"></i> stickers@atelier-enseigne.fr</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 L'Atelier de l'Enseigne - Configurateur stickers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="stickerCartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Votre panier</h2>
+                <span class="modal-close">&times;</span>
+            </div>
+            <div class="modal-body" id="stickerCartModalBody">
+                <!-- Contenu dynamique -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" id="continueSticker">Continuer</button>
+                <button class="btn-primary" id="checkoutSticker">Commander</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/configurateur-stickers.js"></script>
+</body>
+</html>

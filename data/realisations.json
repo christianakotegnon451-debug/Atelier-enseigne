@@ -1,0 +1,17 @@
+[
+  {
+    "image": "enseignes/enseigne-01.jpg",
+    "categorie": "enseignes",
+    "nom": "Enseigne lumineuse"
+  },
+  {
+    "image": "enseignes/enseigne-02.jpg",
+    "categorie": "enseignes",
+    "nom": "Enseigne murale"
+  },
+  {
+    "image": "vehicules/vehicule-01.jpg",
+    "categorie": "vehicules",
+    "nom": "Marquage véhicule"
+  }
+]
